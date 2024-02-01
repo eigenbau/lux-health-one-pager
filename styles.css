@@ -271,7 +271,7 @@ section.dark {
 }
 
 section .section-grid {
-  --margin: 3rem;
+  --padding: 3rem;
   display: grid;
   column-gap: 2rem;
   padding-bottom: 0;
@@ -285,7 +285,7 @@ section .section-grid {
     "media-full-width";
 
   .title {
-    margin-block-start: var(--margin);
+    padding-block-start: var(--padding);
     grid-area: title;
   }
 
@@ -295,10 +295,10 @@ section .section-grid {
   }
 
   :first-child.text {
-    margin-block-start: var(--margin);
+    padding-block-start: var(--padding);
   }
   :last-child.text {
-    margin-block-end: var(--margin);
+    padding-block-end: var(--padding);
   }
 
   .media {
@@ -306,7 +306,7 @@ section .section-grid {
     justify-self: stretch;
     /* align-self: end; */
     overflow: hidden;
-    margin-block: var(--margin);
+    padding-block: var(--padding);
     scroll-snap-align: start;
   }
 
@@ -315,7 +315,7 @@ section .section-grid {
   }
   .media.full-width {
     grid-area: media-full-width;
-    margin-block-end: var(--margin);
+    padding-block-end: var(--padding);
     margin-inline: calc(var(--content-padding-inline) * -1);
   }
 }
@@ -381,7 +381,7 @@ section .section-grid.center-vertically {
   }
 }
 
-/* Hero section - Grid */
+/* Section grid - Hero */
 section .section-grid.hero {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr auto auto;
@@ -426,6 +426,11 @@ section .section-grid.hero {
   section .section-grid.hero {
     min-height: 100vh;
   }
+}
+
+/* Section grid - Footer */
+section .section-grid.footer {
+  min-height: 100vh;
 }
 
 /* Hero section - Rotating text */
@@ -734,7 +739,7 @@ footer {
 .media.ai-input {
   position: relative;
   padding-inline: 10%;
-  padding-block-start: 108%;
+  margin-block-start: 108%;
   font-family: Söhne, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -754,7 +759,7 @@ footer {
 
 @media (width >= 480px) {
   .media.ai-input {
-    padding-block-start: 105%;
+    margin-block-start: 105%;
 
     .faux-input {
       padding: clamp(0px, 0.95vmin, 10px);
