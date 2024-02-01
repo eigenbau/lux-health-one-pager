@@ -12,7 +12,7 @@
   <body>
     <!-- Header -->
     <header class="content-grid">
-      <section class="full-width dark">
+      <section class="full-width dark snap-to-top fullscreen">
         <div class="content section-grid hero">
           <h2 class="heading">Pain-free clinical charting that&nbsp;works</h2>
           <h2 class="rotating-text highlight-1">for you.</h2>
@@ -27,9 +27,8 @@
             </span>
           </h2>
           <p>
-            See how Lux Health redefines healthcare documentation,
-            communication, and clinical descision making for small practices.<br />
-            &mdash; <br />A prototype introduction.
+            See how Lux Health can redefine charting in small clinics.<br />
+            A prototype introduction.
           </p>
           <a href="#main" class="desktop"
             ><span class="material-symbols-outlined more">
@@ -43,7 +42,7 @@
     <!-- Main -->
     <main id="main" class="content-grid">
       <section class="full-width">
-        <div class="section-grid">
+        <div class="section-grid snap-to-top">
           <div class="title"><h1>Key features</h1></div>
           <div class="text">
             <h2>Intuitive, mobile-first design</h2>
@@ -60,7 +59,7 @@
               relationship.
             </p>
           </div>
-          <div class="media full-width">
+          <div class="media full-width snap-to-center">
             <div class="horizontal-scroller snaps-inline">
               <img src="img/screenshot-directory.png" alt="Lux - Directory" />
               <img
@@ -76,23 +75,19 @@
           </div>
         </div>
       </section>
-      <section class="full-width">
+      <section class="full-width snap-to-top">
         <div class="section-grid text-aside reverse">
           <div class="text">
             <h2>Customizable &amp; actionable chart data</h2>
             <p>
-              The customizable and actionable features of the system ensure that
-              clinical data documentation is highly adaptable, accommodating
-              various practice styles with options for narrative or itemized
-              records. This flexibility extends to the inclusion of both
-              quantitative and qualitative observations. Importantly, the system
-              intelligently establishes logical connections among conditions,
-              goals, and care plans. This integration enhances patient care
-              management, allowing for a more cohesive and efficient approach to
-              healthcare delivery.
+              Lux Health adapts to individual clinic use cases through
+              customizable observation templates. Its logical linkage of
+              observations with conditions, goals, and care plans enables more
+              meaningful and actionable charting, leading to an opportubity for
+              enhanced care delivery.
             </p>
           </div>
-          <div class="media">
+          <div class="media snap-to-center">
             <img
               src="img/screenshot-observation-chart.png"
               alt="Lux - Chart - Observation - Graph"
@@ -101,18 +96,69 @@
         </div>
       </section>
       <section class="full-width">
-        <div class="section-grid text-aside">
+        <div class="section-grid text-aside snap-to-top">
           <div class="text">
             <h2>Built for health information exchange</h2>
             <p>
-              The application integrates health information exchange, utilizing
-              FHIR, SNOMED, and LOINC standards. It enables effective data
-              exchange with other healthcare systems, ensuring interoperability
-              and efficient communication in the healthcare ecosystem.
+              Built from the ground up with a focus on health information
+              exchange, the app integrates the leading standards and terminology
+              services, including FHIR, SNOMED CT, and LOINC. It features a
+              one-click chart export function, enabling easy and secure data
+              sharing.
             </p>
           </div>
-          <div class="media">
+          <div class="media snap-to-center">
             <img src="img/screenshot-export.png" alt="Lux - Chart - Export" />
+          </div>
+        </div>
+      </section>
+      <section class="full-width">
+        <div class="section-grid text-aside reverse snap-to-top">
+          <div class="text">
+            <h2>Ready for artificial intelligence</h2>
+            <p>
+              Through one-click chart export, clinicians can utilize clinical
+              assistant AIs like Google's Med-PaLM 2 for tasks such as drafting
+              reports and reviewing cases based on clinical guidelines,
+              effectively reducing workload, saving time, and enhancing
+              decision-making performance.
+            </p>
+          </div>
+          <div class="media ai-input">
+            <div class="typewriter-animation faux-input"><span></span></div>
+          </div>
+          <div class="media snap-to-center">
+            <img src="img/screenshot-ai.png" alt="Lux - Chart - Export" />
+          </div>
+        </div>
+      </section>
+      <section class="full-width dark">
+        <div class="content section-grid one-col center snap-to-top">
+          <div class="text">
+            <h1>Technologies</h1>
+            <h2>Under the hood</h2>
+            <p>
+              The app leverages secure, and compliant technologies across both
+              frontend and backend to ensure a seamless, efficient, and robust
+              platform.
+            </p>
+
+            <h3>Frontend</h3>
+            <ul class="chips">
+              <li><span>Angular</span></li>
+              <li><span>Ionic Framework</span></li>
+              <li><span>Progressive Web App</span></li>
+              <li><span>Typescript</span></li>
+              <li><span>SCSS</span></li>
+            </ul>
+            <h3>Backend</h3>
+            <ul class="chips">
+              <li><span>HL7 FHIR</span></li>
+              <li><span>SNOMED CT</span></li>
+              <li><span>LOINC</span></li>
+              <li><span>Google Cloud Healthcare API</span></li>
+              <li><span>Node JS</span></li>
+            </ul>
           </div>
           <!-- <div class="media grid box logos">
             <img
@@ -134,63 +180,65 @@
         </div>
       </section>
       <section class="full-width">
-        <div class="section-grid text-aside reverse">
+        <div class="content section-grid one-col center snap-to-top">
           <div class="text">
-            <h2>Ready for artificial intelligence</h2>
+            <h1>Code</h1>
+            <h2>The geeky stuff</h2>
             <p>
-              Charts can be de-identified and exported to a GPT (Generative
-              Pre-trained Transformer) to perform administrative tasks like
-              drafting reports or assist with clinical decision support (beware
-              of hallucinations and the validity of returned results 😱)
+              For those who want to take a deep dive into the technical
+              foundation of the project, the code is available for review on
+              GitGub.
             </p>
-          </div>
-          <div class="media ai-input">
-            <div class="typewriter-animation faux-input"><span></span></div>
           </div>
           <div class="media">
-            <img src="img/screenshot-ai.png" alt="Lux - Chart - Export" />
+            <a href="https://github.com/eigenbau/lux-health-app" target="_blank"
+              ><img
+                class="invert-in-dark-mode"
+                src="img/github-mark.svg"
+                alt="GitHub"
+            /></a>
           </div>
-        </div>
-      </section>
-      <section class="full-width dark">
-        <div class="content section-grid one-col center">
-          <div class="text">
-            <h1>Technologies</h1>
-            <h2>Under the hood</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam qui
-              laboriosam cum nihil vitae odio illo incidunt perspiciatis, ab
-              accusamus, suscipit eaque molestias omnis eum cupiditate ratione
-              excepturi. Modi, sint.
-            </p>
-
-            <h3>Frontend</h3>
-            <ul class="chips">
-              <li><span>Angular</span></li>
-              <li><span>Ionic Framework</span></li>
-              <li><span>Progressive Web App</span></li>
-              <li><span>Typescript</span></li>
-              <li><span>SCSS</span></li>
-            </ul>
-            <h3>Backend</h3>
-            <ul class="chips">
-              <li><span>Google Cloud Healthcare API</span></li>
-              <li><span>Node JS</span></li>
-            </ul>
-          </div>
+          <!-- <div class="media grid box logos">
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/fhir-logo.svg"
+              alt="FHIR"
+            />
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/snomed-ct-logo.svg"
+              alt="SNOMED-CT"
+            />
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/loinc-logo.svg"
+              alt="LOINC"
+            />
+          </div> -->
         </div>
       </section>
     </main>
     <!-- Footer -->
     <footer class="content-grid">
       <section class="full-width">
-        <div class="content section-grid footer one-col center">
+        <div
+          class="content section-grid footer one-col center snap-to-top fullscreen"
+        >
           <div class="text">
+            <p>Made in Squamish, CAN <br />by Pascal Bolla</p>
             <p>
-              made by
-              <span class="material-symbols-outlined"> back_hand </span> in
-              Squamish, BC, Canada by Pascal Bolla in 2024<br />&mdash;<br />Marke&nbsp;Eigenbau
+              <strong
+                ><a href="mailto:pascalbolla&#64;gmail&#46;com">
+                  <span class="material-symbols-outlined point">
+                    chevron_right </span
+                  ><span class="material-symbols-outlined"> mail </span
+                  ><span class="material-symbols-outlined point left">
+                    chevron_left
+                  </span></a
+                ></strong
+              >
             </p>
+            <p>Marke&nbsp;Eigenbau</p>
           </div>
         </div>
       </section>

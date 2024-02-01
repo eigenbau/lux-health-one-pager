@@ -159,6 +159,14 @@ body {
   scroll-snap-type: y mandatory;
 }
 
+.snap-to-top {
+  scroll-snap-align: start;
+}
+
+.snap-to-center {
+  scroll-snap-align: center;
+}
+
 @media (width > 480px) {
   html,
   body {
@@ -250,7 +258,6 @@ section {
   --section-background-color: var(--color-background);
   --section-color-text: var(--color-text);
   --section-color-contrast: var(--color-contrast-light);
-  scroll-snap-align: start;
   color: var(--section-color-text);
   background: var(--section-background-color);
   min-height: 100svh;
@@ -291,7 +298,6 @@ section .section-grid {
 
   .text {
     grid-area: text;
-    /* min-height: 20rem; */
   }
 
   :first-child.text {
@@ -304,10 +310,8 @@ section .section-grid {
   .media {
     grid-area: media;
     justify-self: stretch;
-    /* align-self: end; */
     overflow: hidden;
     padding-block: var(--padding);
-    scroll-snap-align: start;
   }
 
   .media.limit-height {
@@ -327,6 +331,7 @@ section .section-grid.one-col {
 section .section-grid.center {
   > * {
     text-align: center;
+    margin-inline: auto;
   }
   h1,
   h2,
@@ -336,9 +341,12 @@ section .section-grid.center {
   }
 }
 
+section .section-grid.fullscreen {
+  min-height: 100vh;
+}
+
 @media (width >= 480px) {
   section {
-    scroll-snap-align: unset;
     min-height: auto;
   }
 
@@ -353,6 +361,10 @@ section .section-grid.center {
 
     min-height: auto;
     max-height: auto;
+
+    .media {
+      min-height: auto;
+    }
 
     .media.full-width {
       margin-inline: 0;
@@ -423,15 +435,8 @@ section .section-grid.hero {
   }
 }
 
-@media (width >= 480px) {
-  section .section-grid.hero {
-    min-height: 100vh;
-  }
-}
-
 /* Section grid - Footer */
 section .section-grid.footer {
-  min-height: 100vh;
   align-content: center;
   align-items: center;
 }
@@ -569,8 +574,6 @@ ul.chips span::after {
 }
 
 footer {
-  font-size: 0.9rem;
-  opacity: 50%;
   p {
     max-width: 30ch;
   }
@@ -692,7 +695,7 @@ footer {
 @keyframes words {
   0%,
   20% {
-    content: "Draft a case report";
+    content: "Draft a case report and save it to G-Docs";
   }
   21%,
   40% {
@@ -739,7 +742,7 @@ footer {
 }
 
 /* AI input */
-.media.ai-input {
+section .section-grid .media.ai-input {
   position: relative;
   padding-inline: 10%;
   margin-block-start: 108%;
@@ -747,6 +750,7 @@ footer {
     Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
+  letter-spacing: -0.0125em;
 
   .typewriter-animation {
     --background: white;
@@ -761,7 +765,7 @@ footer {
 }
 
 @media (width >= 480px) {
-  .media.ai-input {
+  section .section-grid .media.ai-input {
     margin-block-start: 105%;
 
     .faux-input {
@@ -770,4 +774,23 @@ footer {
       font-size: clamp(4px, 0.95vmin, 9.1px);
     }
   }
+}
+
+/* Contact animation */
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--offset-x));
+  }
+}
+
+.point {
+  --offset-x: -0.125em;
+  animation: point 0.6s infinite alternate ease-in-out;
+}
+
+.point.left {
+  --offset-x: 0.124em;
 }
