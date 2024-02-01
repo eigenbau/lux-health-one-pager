@@ -336,12 +336,6 @@ section .section-grid.center {
   }
 }
 
-section .section-grid.center-vertically {
-  > * {
-    align-self: center;
-  }
-}
-
 @media (width >= 480px) {
   section {
     scroll-snap-align: unset;
@@ -362,6 +356,13 @@ section .section-grid.center-vertically {
 
     .media.full-width {
       margin-inline: 0;
+    }
+  }
+
+  section .section-grid.text-aside {
+    .text {
+      padding-block: 0;
+      align-self: center;
     }
   }
 
@@ -432,6 +433,7 @@ section .section-grid.hero {
 section .section-grid.footer {
   min-height: 100vh;
   align-content: center;
+  align-items: center;
 }
 
 /* Hero section - Rotating text */
