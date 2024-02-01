@@ -431,6 +431,7 @@ section .section-grid.hero {
 /* Section grid - Footer */
 section .section-grid.footer {
   min-height: 100vh;
+  align-content: center;
 }
 
 /* Hero section - Rotating text */
