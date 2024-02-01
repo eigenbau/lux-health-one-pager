@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Lux Health - Intro</title>
@@ -13,7 +13,7 @@
     <!-- Header -->
     <header class="content-grid">
       <section class="full-width dark">
-        <div class="content grid hero">
+        <div class="content section-grid hero">
           <h2 class="heading">Pain-free clinical charting that&nbsp;works</h2>
           <h2 class="rotating-text highlight-1">for you.</h2>
           <h2 class="rotating-text highlight-2">for your patients.</h2>
@@ -22,11 +22,14 @@
           </h2>
           <h2 class="rotating-text highlight-4">with AI.</h2>
           <h2 class="rotating-text">
-            <span class="material-symbols-outlined"> thumb_up </span>
+            <span class="material-symbols-outlined highlight-1">
+              thumb_up
+            </span>
           </h2>
           <p>
-            See how Lux Health redefines healthcare documentation for small
-            practices.
+            See how Lux Health redefines healthcare documentation,
+            communication, and clinical descision making for small practices.<br />
+            &mdash; <br />A prototype introduction.
           </p>
           <a href="#main" class="desktop"
             ><span class="material-symbols-outlined more">
@@ -40,7 +43,7 @@
     <!-- Main -->
     <main id="main" class="content-grid">
       <section class="full-width">
-        <div class="grid">
+        <div class="section-grid">
           <div class="title padding-top"><h1>Key features</h1></div>
           <div class="text">
             <h2>Intuitive, mobile-first design</h2>
@@ -57,15 +60,26 @@
               relationship.
             </p>
           </div>
-          <div class="media">
-            <img src="img/screenshot-directory.png" alt="Lux - Directory" />
+          <div class="media full-width">
+            <div class="horizontal-scroller snaps-inline">
+              <img src="img/screenshot-directory.png" alt="Lux - Directory" />
+              <img
+                id="test"
+                src="img/screenshot-chart.png"
+                alt="Lux - Chart - Overview"
+              />
+              <img
+                src="img/screenshot-schedule.png"
+                alt="Lux - Observation - Chart"
+              />
+            </div>
           </div>
         </div>
       </section>
       <section class="full-width">
-        <div class="grid reverse">
+        <div class="section-grid reverse">
           <div class="text padding-top">
-            <h2>Customizable &amp; actionable</h2>
+            <h2>Customizable &amp; actionable chart data</h2>
             <p>
               The customizable and actionable features of the system ensure that
               clinical data documentation is highly adaptable, accommodating
@@ -79,37 +93,49 @@
             </p>
           </div>
           <div class="media">
-            <img src="img/screenshot-chart.png" alt="Lux - Chart - Overview" />
-          </div>
-        </div>
-      </section>
-      <section class="full-width">
-        <div class="grid">
-          <div class="text padding-top">
-            <h2>Built for health information exchange</h2>
-            <p>
-              The application is designed from the ground up with a focus on
-              health information exchange, integrating key standards and
-              terminology systems such as FHIR, SNOMED, and LOINC. This
-              implementation facilitates a meaningful exchange of data with
-              other healthcare providers and systems, aligning with the
-              technology used by major stakeholders in the industry. This
-              foundational design ensures seamless interoperability and
-              efficient communication within the healthcare ecosystem.
-            </p>
-          </div>
-          <div class="media center">
             <img
-              class="shadow"
-              src="img/export-alert.png"
-              alt="Lux - Chart - Export"
+              src="img/screenshot-observation-chart.png"
+              alt="Lux - Chart - Observation - Graph"
             />
           </div>
         </div>
       </section>
       <section class="full-width">
-        <div class="grid reverse">
+        <div class="section-grid">
           <div class="text padding-top">
+            <h2>Built for health information exchange</h2>
+            <p>
+              The application integrates health information exchange, utilizing
+              FHIR, SNOMED, and LOINC standards. It enables effective data
+              exchange with other healthcare systems, ensuring interoperability
+              and efficient communication in the healthcare ecosystem.
+            </p>
+          </div>
+          <div class="media">
+            <img src="img/screenshot-export.png" alt="Lux - Chart - Export" />
+          </div>
+          <!-- <div class="media grid box logos">
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/fhir-logo.svg"
+              alt="FHIR"
+            />
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/snomed-ct-logo.svg"
+              alt="SNOMED-CT"
+            />
+            <img
+              class="shadow invert-in-dark-mode"
+              src="img/loinc-logo.svg"
+              alt="LOINC"
+            />
+          </div> -->
+        </div>
+      </section>
+      <section class="full-width">
+        <div class="section-grid reverse">
+          <div class="text">
             <h2>Ready for artificial intelligence</h2>
             <p>
               Charts can be de-identified and exported to a GPT (Generative
@@ -118,13 +144,16 @@
               of hallucinations and the validity of returned results 😱)
             </p>
           </div>
+          <div class="media ai-input">
+            <div class="typewriter-animation faux-input"><span></span></div>
+          </div>
           <div class="media">
-            <img src="img/screenshot-ai.png" alt="Lux - AI chat" />
+            <img src="img/screenshot-ai.png" alt="Lux - Chart - Export" />
           </div>
         </div>
       </section>
       <section class="full-width dark">
-        <div class="content grid center">
+        <div class="content section-grid one-col center">
           <div class="text">
             <h1>Technologies</h1>
             <h2>Under the hood</h2>
@@ -134,8 +163,7 @@
               accusamus, suscipit eaque molestias omnis eum cupiditate ratione
               excepturi. Modi, sint.
             </p>
-          </div>
-          <div class="text">
+
             <h3>Frontend</h3>
             <ul class="chips">
               <li><span>Angular</span></li>
@@ -146,9 +174,6 @@
             </ul>
             <h3>Backend</h3>
             <ul class="chips">
-              <li><span>FHIR</span></li>
-              <li><span>SNOMED-CT</span></li>
-              <li><span>LOINC</span></li>
               <li><span>Google Cloud Healthcare API</span></li>
               <li><span>Node JS</span></li>
             </ul>
@@ -159,12 +184,14 @@
     <!-- Footer -->
     <footer class="content-grid">
       <section class="full-width">
-        <div class="content grid center">
-          <p class="center">
-            made by
-            <span class="material-symbols-outlined"> back_hand </span> in
-            Squamish, BC, Canada by Pascal Bolla in 2024<br />&mdash;<br />Marke&nbsp;Eigenbau
-          </p>
+        <div class="content section-grid one-col center center-vertically">
+          <div class="text">
+            <p>
+              made by
+              <span class="material-symbols-outlined"> back_hand </span> in
+              Squamish, BC, Canada by Pascal Bolla in 2024<br />&mdash;<br />Marke&nbsp;Eigenbau
+            </p>
+          </div>
         </div>
       </section>
     </footer>
