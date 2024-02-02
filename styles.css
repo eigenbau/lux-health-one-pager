@@ -340,7 +340,7 @@ section .section-grid.center p {
 }
 
 section.fullscreen {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 @media (min-width: 480px) {
