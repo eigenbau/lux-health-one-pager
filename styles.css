@@ -108,7 +108,7 @@ p {
 }
 
 ul {
-  list-style-type: none; /* Remove default bullets */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
